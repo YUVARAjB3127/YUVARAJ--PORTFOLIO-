@@ -1,23 +1,295 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>YUVARAJ B | Portfolio</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YUVARAJ B | Founder</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#fff}
-header{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-background:linear-gradient(135deg,#0b1020,#1b2a52);animation:bg 8s infinite alternate}
-@keyframes bg{to{filter:hue-rotate(40deg)}}
-h1{font-size:56px;margin:0} h2{color:#00e5ff}
-section{padding:60px 10%} .card{background:#18233f;padding:20px;border-radius:12px;margin:10px 0}
-.bar{height:10px;background:#333;border-radius:10px}.fill{height:10px;background:#00e5ff;border-radius:10px}
-footer{text-align:center;padding:20px;background:#111}
-</style></head>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b1e;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:#00f5ff;
+filter:blur(180px);
+opacity:.15;
+top:-150px;
+left:-150px;
+animation:move 8s infinite alternate;
+}
+
+@keyframes move{
+100%{
+transform:translate(600px,300px);
+}
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+z-index:100;
+}
+
+nav h2{
+color:#00f5ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.4s;
+}
+
+nav a:hover{
+color:#00f5ff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+animation:fade 2s;
+}
+
+.hero h2{
+color:#00f5ff;
+margin-top:10px;
+}
+
+.hero p{
+max-width:700px;
+margin-top:20px;
+line-height:1.8;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 40px;
+background:#00f5ff;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px cyan;
+}
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#00f5ff;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.card{
+background:#14142b;
+padding:30px;
+border-radius:20px;
+transition:.5s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px cyan;
+}
+
+.progress{
+background:#222;
+height:10px;
+border-radius:20px;
+margin-top:15px;
+overflow:hidden;
+}
+
+.progress span{
+display:block;
+height:100%;
+background:#00f5ff;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+
+</head>
+
 <body>
-<header><h1>YUVARAJ B</h1><h2>Founder | Web Developer</h2><p>Building professional and modern web experiences.</p></header>
-<section><h2>About</h2><div class="card">I'm YUVARAJ B, passionate about technology, innovation and creating beautiful websites.</div></section>
-<section><h2>Skills</h2>
-<div class="card">HTML<div class="bar"><div class="fill" style="width:95%"></div></div></div>
-<div class="card">CSS<div class="bar"><div class="fill" style="width:90%"></div></div></div>
-<div class="card">JavaScript<div class="bar"><div class="fill" style="width:80%"></div></div></div>
+
+<nav>
+<h2>YUVARAJ B</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<div class="hero">
+
+<h1>YUVARAJ B</h1>
+
+<h2>Founder | Web Developer | Future Innovator</h2>
+
+<p>
+Welcome to my professional portfolio.
+I enjoy creating beautiful websites, learning modern technologies,
+solving real-world problems, and building projects that make an impact.
+Every line of code is another step toward becoming a better developer.
+</p>
+
+<a href="#skills" class="btn">Explore Skills</a>
+
+</div>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<p style="text-align:center;font-size:18px;line-height:2;">
+Hello! I'm <b>YUVARAJ B</b>, the Founder and a passionate technology enthusiast.
+I believe that dedication, creativity, and continuous learning are the keys to success.
+My goal is to build professional digital experiences and innovative solutions that inspire people.
+</p>
+
 </section>
-<footer>© 2026 YUVARAJ B</footer>
-</body></html>
+
+<section id="skills">
+
+<h2 class="title">My Skills</h2>
+
+<div class="skills">
+
+<div class="card">
+<h3>HTML</h3>
+<p>Creating clean and semantic web pages.</p>
+<div class="progress">
+<span style="width:95%"></span>
+</div>
+</div>
+
+<div class="card">
+<h3>CSS</h3>
+<p>Designing responsive and attractive interfaces.</p>
+<div class="progress">
+<span style="width:90%"></span>
+</div>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3>
+<p>Adding animations and interactive features.</p>
+<div class="progress">
+<span style="width:80%"></span>
+</div>
+</div>
+
+<div class="card">
+<h3>Problem Solving</h3>
+<p>Finding efficient solutions with logical thinking.</p>
+<div class="progress">
+<span style="width:88%"></span>
+</div>
+</div>
+
+<div class="card">
+<h3>Creativity</h3>
+<p>Turning ideas into beautiful digital products.</p>
+<div class="progress">
+<span style="width:92%"></span>
+</div>
+</div>
+
+<div class="card">
+<h3>Leadership</h3>
+<p>Leading projects with confidence and vision.</p>
+<div class="progress">
+<span style="width:85%"></span>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<p style="text-align:center;font-size:18px;">
+Thank you for visiting my portfolio.<br><br>
+
+<b>Founder:</b> YUVARAJ B
+</p>
+
+</section>
+
+<footer>
+
+© 2026 YUVARAJ B | Founder. All Rights Reserved.
+
+</footer>
+
+</body>
+  </html>
